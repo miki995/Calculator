@@ -1,16 +1,14 @@
-
 package application;
 
-
+import java.awt.event.WindowEvent;
 
 public class App extends javax.swing.JFrame {
-
-
     static boolean toCLS = true;
 
     public App() {
         initComponents();
-      buttons = new Button[]{
+        inputListener = new InputListener(jLabelDisplay, jLabelExpression);
+        buttons = new Button[]{
             new Button(jButton1, "one", 0, "1", 0),
             new Button(jButton6, "two", 0, "6", 0),
             new Button(jButtonDiv, "div", 2, " / ", 8),
@@ -756,7 +754,7 @@ public class App extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 255)));
 
         jLabelExpression.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
-        jLabelExpression.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelExpression.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabelExpression.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -830,168 +828,304 @@ public class App extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonOpenBrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOpenBrackActionPerformed
-      
+        inputListener.action(buttons[18]);
     }//GEN-LAST:event_jButtonOpenBrackActionPerformed
 
     private void jButtonExpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExpActionPerformed
-      
+   inputListener.action(buttons[23]);
     }//GEN-LAST:event_jButtonExpActionPerformed
 
     private void jButtonEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualActionPerformed
-       
+      inputListener.action(buttons[37]);
     }//GEN-LAST:event_jButtonEqualActionPerformed
 
     private void jToggleButtonDegRadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButtonDegRadActionPerformed
-      
+     toggleDegRad();
     }//GEN-LAST:event_jToggleButtonDegRadActionPerformed
 
     private void jButtonEulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEulerActionPerformed
-       
+       inputListener.action(buttons[4]);
     }//GEN-LAST:event_jButtonEulerActionPerformed
 
     private void jButtonClrInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClrInputActionPerformed
-      
+       inputListener.action(buttons[27]);
     }//GEN-LAST:event_jButtonClrInputActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-      
+      inputListener.action(buttons[24]);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButtonDecPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDecPointActionPerformed
-      
+      inputListener.action(buttons[10]);
     }//GEN-LAST:event_jButtonDecPointActionPerformed
 
     private void jButtonPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlusActionPerformed
-      
+      inputListener.action(buttons[32]);
     }//GEN-LAST:event_jButtonPlusActionPerformed
 
     private void jButtonPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPMActionPerformed
-       
+       inputListener.action(buttons[17]);
     }//GEN-LAST:event_jButtonPMActionPerformed
 
     private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton0ActionPerformed
-      
+      inputListener.action(buttons[31]);
     }//GEN-LAST:event_jButton0ActionPerformed
 
     private void jButtonFactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFactActionPerformed
-     
+        inputListener.action(buttons[9]);
     }//GEN-LAST:event_jButtonFactActionPerformed
 
     private void jButtonPIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPIActionPerformed
-       
+        inputListener.action(buttons[8]);
     }//GEN-LAST:event_jButtonPIActionPerformed
 
     private void jButtonSqrtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSqrtActionPerformed
-     
+        inputListener.action(buttons[5]);
     }//GEN-LAST:event_jButtonSqrtActionPerformed
 
     private void jButtonMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMinusActionPerformed
-  
+        inputListener.action(buttons[22]);
     }//GEN-LAST:event_jButtonMinusActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-       
+      inputListener.action(buttons[19]);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     
+     inputListener.action(buttons[6]);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+     inputListener.action(buttons[0]);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonArcTanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonArcTanActionPerformed
-    
+      inputListener.action(buttons[36]);
     }//GEN-LAST:event_jButtonArcTanActionPerformed
 
     private void jButtonArcCosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonArcCosActionPerformed
-       
+       inputListener.action(buttons[35]);
     }//GEN-LAST:event_jButtonArcCosActionPerformed
 
     private void jButtonArcSinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonArcSinActionPerformed
-     
+       inputListener.action(buttons[25]);
     }//GEN-LAST:event_jButtonArcSinActionPerformed
 
     private void jButtonSqrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSqrActionPerformed
-     
+     inputListener.action(buttons[15]);
     }//GEN-LAST:event_jButtonSqrActionPerformed
 
     private void jButtonMultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMultActionPerformed
-      
+      inputListener.action(buttons[16]);
     }//GEN-LAST:event_jButtonMultActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-      
+      inputListener.action(buttons[1]);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-   
+       inputListener.action(buttons[30]);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-      
+      inputListener.action(buttons[33]);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButtonTanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTanActionPerformed
-       
+      inputListener.action(buttons[21]);
     }//GEN-LAST:event_jButtonTanActionPerformed
 
     private void jButtonSinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSinActionPerformed
-      
+       inputListener.action(buttons[38]);
     }//GEN-LAST:event_jButtonSinActionPerformed
 
     private void jButtonCosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCosActionPerformed
-      
+      inputListener.action(buttons[20]);
     }//GEN-LAST:event_jButtonCosActionPerformed
 
     private void jButtonInvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInvActionPerformed
-     
+       inputListener.action(buttons[13]);
     }//GEN-LAST:event_jButtonInvActionPerformed
 
     private void jButtonDivActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDivActionPerformed
-      
+       inputListener.action(buttons[2]);
     }//GEN-LAST:event_jButtonDivActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-       
+       inputListener.action(buttons[11]);
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-     
+       inputListener.action(buttons[7]);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButtonRootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRootActionPerformed
-     
+       inputListener.action(buttons[34]);
     }//GEN-LAST:event_jButtonRootActionPerformed
 
     private void jButtonLogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogActionPerformed
-       
+        inputListener.action(buttons[29]);
     }//GEN-LAST:event_jButtonLogActionPerformed
 
     private void jButtonClrAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClrAllActionPerformed
-    
+        inputListener.action(buttons[12]);
     }//GEN-LAST:event_jButtonClrAllActionPerformed
 
     private void jButtonDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDelActionPerformed
-     
+       inputListener.action(buttons[28]);
     }//GEN-LAST:event_jButtonDelActionPerformed
 
     private void jButtonCloseBrackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCloseBrackActionPerformed
-      
+     inputListener.action(buttons[3]);
     }//GEN-LAST:event_jButtonCloseBrackActionPerformed
 
     private void jButtonLog10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLog10ActionPerformed
-     
+       inputListener.action(buttons[26]);
     }//GEN-LAST:event_jButtonLog10ActionPerformed
 
     private void jButtonInvLog10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInvLog10ActionPerformed
-      
+       inputListener.action(buttons[14]);
     }//GEN-LAST:event_jButtonInvLog10ActionPerformed
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-      
-        
+      switch (evt.getKeyChar()) {
+            case 'e':
+                inputListener.action(buttons[4]);
+                break;
+            case 'E':
+                inputListener.action(buttons[14]);
+                break;
+            case 'c':
+            case 'C':
+                inputListener.action(buttons[20]);
+                break;
+            case 'd':
+                inputListener.action(buttons[2]);
+                break;
+            case 'D':
+                toggleDegRad();
+                break;
+            case 'f':
+            case 'F':
+                inputListener.action(buttons[9]);
+                break;
+            case 'i':
+            case 'I':
+                inputListener.action(buttons[13]);
+                break;
+            case 'l':
+                inputListener.action(buttons[29]);
+                break;
+            case 'L':
+                inputListener.action(buttons[29]);
+                break;
+            case 'o':
+            case 'O':
+            case '0':
+                inputListener.action(buttons[31]);
+                break;
+            case 'p':
+            case 'P':
+                inputListener.action(buttons[8]);
+                break;
+            case 'q':
+            case 'Q':
+                this.dispatchEvent(new WindowEvent(this, WindowEvent.WINDOW_CLOSING));
+                break;
+            case 'r':
+                inputListener.action(buttons[5]);
+                break;
+            case 'R':
+                inputListener.action(buttons[34]);
+                break;
+            case 's':
+                inputListener.action(buttons[38]);
+                break;
+            case 'S':
+                inputListener.action(buttons[25]);
+                break;
+            case 't':
+            case 'T':
+                inputListener.action(buttons[21]);
+                break;
+            case 'x':
+            case 'X':
+                inputListener.action(buttons[16]);
+                break;
+
+            case '²':
+                inputListener.action(buttons[15]);
+                break;
+            case '.':
+                inputListener.action(buttons[10]);
+                break;
+            case '^':
+                inputListener.action(buttons[23]);
+                break;
+            case '*':
+                inputListener.action(buttons[16]);
+                break;
+            case '/':
+                inputListener.action(buttons[2]);
+                break;
+            case '+':
+                inputListener.action(buttons[32]);
+                break;
+
+            case '-':
+                inputListener.action(buttons[22]);
+                break;
+            case '=':
+                inputListener.action(buttons[37]);
+                break;
+            case '(':
+                inputListener.action(buttons[18]);
+                break;
+            case ')':
+                inputListener.action(buttons[3]);
+                break;
+            case '!':
+                inputListener.action(buttons[9]);
+                break;
+            case '1':
+                inputListener.action(buttons[0]);
+                break;
+            case '2':
+                inputListener.action(buttons[6]);
+                break;
+            case '3':
+                inputListener.action(buttons[19]);
+                break;
+            case '4':
+                inputListener.action(buttons[33]);
+                break;
+
+            case '5':
+                inputListener.action(buttons[30]);
+                break;
+
+            case '6':
+                inputListener.action(buttons[1]);
+                break;
+            case '7':
+                inputListener.action(buttons[7]);
+                break;
+            case '8':
+                inputListener.action(buttons[24]);
+                break;
+            case '9':
+                inputListener.action(buttons[11]);
+                break;
+            case '\b':
+                inputListener.action(buttons[28]);
+                break;
+            case '\r':
+                inputListener.action(buttons[37]);
+                break;
+            case '\n':
+                inputListener.action(buttons[37]);
+                break;
+        }
     }//GEN-LAST:event_formKeyPressed
 
     /**
@@ -1021,8 +1155,6 @@ public class App extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -1032,6 +1164,7 @@ public class App extends javax.swing.JFrame {
             }
         });
     }
+    InputListener inputListener;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton0;
     private javax.swing.JButton jButton1;
@@ -1080,8 +1213,7 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JToggleButton jToggleButtonDegRad;
     private javax.swing.JPanel keyPad;
     // End of variables declaration//GEN-END:variables
-
-       final Button[] buttons;
+    final Button[] buttons;
 
     private void toggleDegRad() {
         if (jLabelDegRadToggle.getText().equals("D")) {

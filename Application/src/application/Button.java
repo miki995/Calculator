@@ -25,11 +25,11 @@ public class Button {
         return type == 0;
     }
 
-    boolean isUnaryOp() {
+    boolean isUnaryOperation() {
         return type == 1;
     }
 
-    boolean isBinaryOp() {
+    boolean isBinaryOperation() {
         return type == 2;
     }
 
@@ -37,11 +37,11 @@ public class Button {
         return type == 3;
     }
 
-    boolean isCmnd() {
+    boolean isCommand() {
         return type == 4;
     }
 
-    boolean isPM() {
+    boolean isPlusMinus() {
         return type == 5;
     }
 
