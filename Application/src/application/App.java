@@ -754,7 +754,7 @@ public class App extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 204, 255)));
 
         jLabelExpression.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
-        jLabelExpression.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelExpression.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabelExpression.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);

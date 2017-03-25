@@ -97,7 +97,25 @@ public class InputListener {
                 }
                 displayExpression(button);
                 display.setText("");
-           //TODO  overflow define 
+                Button output;
+                try {
+                    output = new ExpressionSolver().ShuntingYard(expArray);
+                } catch (java.lang.NumberFormatException | java.lang.ArithmeticException e) {
+                    output = null;
+                }
+                if (output == null || Double.isInfinite(Double.parseDouble(output.display))) {
+                    display.setText("ERROR: OVERFLOW OR ...");
+                    result = true;
+                } else {
+                    Double num = Double.parseDouble(output.display);
+                    if (num <= Double.valueOf(Long.valueOf(Long.MAX_VALUE).toString())
+                            && num - num.longValue() < epsilon) {
+                        display.setText(Long.toString(num.longValue()));
+                    } else {
+                        display.setText(Double.toString(num));
+                    }
+                }
+                
                 result = true;
                 expArray.clear();
                 System.out.println(expString);
