@@ -7,6 +7,7 @@ public class App extends javax.swing.JFrame {
 
     public App() {
         initComponents();
+        this.setLocationRelativeTo(null);
         inputListener = new InputListener(jLabelDisplay, jLabelExpression);
         buttons = new Button[]{
             new Button(jButton1, "one", 0, "1", 0),
@@ -124,6 +125,7 @@ public class App extends javax.swing.JFrame {
             }
         });
 
+        keyPad.setBackground(new java.awt.Color(16, 35, 48));
         keyPad.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 formKeyPressed(evt);
@@ -131,6 +133,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.setLayout(new java.awt.GridLayout(5, 11, 1, 1));
 
+        jButtonEuler.setBackground(new java.awt.Color(0, 153, 204));
         jButtonEuler.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonEuler.setText("eˣ");
         jButtonEuler.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -147,6 +150,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonEuler);
 
+        jButtonInvLog10.setBackground(new java.awt.Color(0, 153, 204));
         jButtonInvLog10.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonInvLog10.setText("10ˣ");
         jButtonInvLog10.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -163,6 +167,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonInvLog10);
 
+        jButtonLog10.setBackground(new java.awt.Color(0, 153, 204));
         jButtonLog10.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonLog10.setText("log₁₀");
         jButtonLog10.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -179,6 +184,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonLog10);
 
+        jButtonOpenBrack.setBackground(new java.awt.Color(0, 153, 204));
         jButtonOpenBrack.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonOpenBrack.setText("(");
         jButtonOpenBrack.setToolTipText("");
@@ -196,6 +202,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonOpenBrack);
 
+        jButtonCloseBrack.setBackground(new java.awt.Color(0, 153, 204));
         jButtonCloseBrack.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonCloseBrack.setText(")");
         jButtonCloseBrack.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -212,6 +219,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonCloseBrack);
 
+        jButtonDel.setBackground(new java.awt.Color(60, 247, 251));
         jButtonDel.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 12)); // NOI18N
         jButtonDel.setText("DEL");
         jButtonDel.addActionListener(new java.awt.event.ActionListener() {
@@ -226,6 +234,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonDel);
 
+        jButtonClrInput.setBackground(new java.awt.Color(60, 247, 251));
         jButtonClrInput.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 12)); // NOI18N
         jButtonClrInput.setText("CE");
         jButtonClrInput.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +249,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonClrInput);
 
+        jButtonClrAll.setBackground(new java.awt.Color(60, 247, 251));
         jButtonClrAll.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 12)); // NOI18N
         jButtonClrAll.setText("C");
         jButtonClrAll.addActionListener(new java.awt.event.ActionListener() {
@@ -254,6 +264,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonClrAll);
 
+        jButtonLog.setBackground(new java.awt.Color(0, 153, 204));
         jButtonLog.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonLog.setText("ln");
         jButtonLog.addActionListener(new java.awt.event.ActionListener() {
@@ -268,6 +279,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonLog);
 
+        jButtonRoot.setBackground(new java.awt.Color(0, 153, 204));
         jButtonRoot.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonRoot.setText("ʸ√x");
         jButtonRoot.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -284,6 +296,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonRoot);
 
+        jButtonExp.setBackground(new java.awt.Color(0, 153, 204));
         jButtonExp.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonExp.setText("xʸ");
         jButtonExp.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -348,6 +361,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButton9);
 
+        jButtonDiv.setBackground(new java.awt.Color(0, 153, 204));
         jButtonDiv.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonDiv.setText("/");
         jButtonDiv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -364,6 +378,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonDiv);
 
+        jButtonInv.setBackground(new java.awt.Color(0, 153, 204));
         jButtonInv.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonInv.setText("1/x");
         jButtonInv.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -380,6 +395,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonInv);
 
+        jButtonCos.setBackground(new java.awt.Color(0, 153, 204));
         jButtonCos.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonCos.setText("cos");
         jButtonCos.addActionListener(new java.awt.event.ActionListener() {
@@ -394,6 +410,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonCos);
 
+        jButtonSin.setBackground(new java.awt.Color(0, 153, 204));
         jButtonSin.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonSin.setText("sin");
         jButtonSin.addActionListener(new java.awt.event.ActionListener() {
@@ -408,6 +425,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonSin);
 
+        jButtonTan.setBackground(new java.awt.Color(0, 153, 204));
         jButtonTan.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonTan.setText("tan");
         jButtonTan.addActionListener(new java.awt.event.ActionListener() {
@@ -470,6 +488,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButton6);
 
+        jButtonMult.setBackground(new java.awt.Color(0, 153, 204));
         jButtonMult.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonMult.setText("*");
         jButtonMult.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -486,6 +505,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonMult);
 
+        jButtonSqr.setBackground(new java.awt.Color(0, 153, 204));
         jButtonSqr.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonSqr.setText("x²");
         jButtonSqr.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -502,6 +522,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonSqr);
 
+        jButtonArcSin.setBackground(new java.awt.Color(0, 153, 204));
         jButtonArcSin.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonArcSin.setText("sin⁻¹");
         jButtonArcSin.addActionListener(new java.awt.event.ActionListener() {
@@ -516,6 +537,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonArcSin);
 
+        jButtonArcCos.setBackground(new java.awt.Color(0, 153, 204));
         jButtonArcCos.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonArcCos.setText("cos⁻¹");
         jButtonArcCos.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -532,6 +554,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonArcCos);
 
+        jButtonArcTan.setBackground(new java.awt.Color(0, 153, 204));
         jButtonArcTan.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonArcTan.setText("tan⁻¹");
         jButtonArcTan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -597,6 +620,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButton3);
 
+        jButtonMinus.setBackground(new java.awt.Color(0, 153, 204));
         jButtonMinus.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonMinus.setText("—");
         jButtonMinus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -613,6 +637,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonMinus);
 
+        jButtonSqrt.setBackground(new java.awt.Color(0, 153, 204));
         jButtonSqrt.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonSqrt.setText("√x");
         jButtonSqrt.setToolTipText("");
@@ -628,6 +653,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonSqrt);
 
+        jToggleButtonDegRad.setBackground(new java.awt.Color(0, 153, 204));
         jToggleButtonDegRad.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 12)); // NOI18N
         jToggleButtonDegRad.setText("DEG");
         jToggleButtonDegRad.addActionListener(new java.awt.event.ActionListener() {
@@ -642,6 +668,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jToggleButtonDegRad);
 
+        jButtonPI.setBackground(new java.awt.Color(0, 153, 204));
         jButtonPI.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonPI.setText("π");
         jButtonPI.setToolTipText("");
@@ -657,6 +684,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonPI);
 
+        jButtonFact.setBackground(new java.awt.Color(0, 153, 204));
         jButtonFact.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 13)); // NOI18N
         jButtonFact.setText("n!");
         jButtonFact.setToolTipText("");
@@ -688,6 +716,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButton0);
 
+        jButtonPM.setBackground(new java.awt.Color(0, 153, 204));
         jButtonPM.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonPM.setText("±");
         jButtonPM.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -704,6 +733,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonPM);
 
+        jButtonDecPoint.setBackground(new java.awt.Color(0, 153, 204));
         jButtonDecPoint.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonDecPoint.setText("·");
         jButtonDecPoint.addActionListener(new java.awt.event.ActionListener() {
@@ -718,6 +748,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonDecPoint);
 
+        jButtonPlus.setBackground(new java.awt.Color(0, 153, 204));
         jButtonPlus.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 0, 14)); // NOI18N
         jButtonPlus.setText("+");
         jButtonPlus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -734,6 +765,7 @@ public class App extends javax.swing.JFrame {
         });
         keyPad.add(jButtonPlus);
 
+        jButtonEqual.setBackground(new java.awt.Color(234, 232, 246));
         jButtonEqual.setFont(new java.awt.Font("CMU Typewriter Text Variable Wi", 1, 18)); // NOI18N
         jButtonEqual.setText("=");
         jButtonEqual.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));

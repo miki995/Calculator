@@ -277,7 +277,6 @@ public class InputListener {
             if (expArray.peekLast().isNumber()) {
                 display.setText(expArray.pollLast().display);
                 int len = display.getText().length();
-                //factorial and square postfix operator
                 if (!expArray.isEmpty() && expArray.peekLast().isUnaryOperation()
                         && "sqrfact".contains(expArray.peekLast().name)) {
                     len += expArray.pollLast().display.length();
